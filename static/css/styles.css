@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+:root{
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.predicted{
+    font-size: 30px;
+    font-family: "Montserrat";
+}
+.split-screen{
+
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    font-family: "Comfortaa";
+    font-weight: 700;
+}
+.left{
+    height: 200px;
+}
+.left,.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+}
+.left{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.5)),
+    url(https://undsgn.com/wp-content/uploads/2018/04/ltotbngnzzu.jpg);
+    background-size: contain;
+    background-blend-mode: soft-light;
+}
+form input[type="text"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border:solid 1px black;
+    transition: 0.3s;
+    border-radius: 4px;
+
+}
+.input-container{
+    padding-left: 20%;
+}
+
+
+button{
+    width: 327px;
+    padding: 15px;
+    height: 50px;
+    color: white;
+    font-family: "Comfortaa";
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover{
+    background-color: darkslategray;
+}
+@media screen and (min-width:1500px) {
+    .split-screen{
+        flex-direction: row;
+        height: 100vh;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .left,.right{
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+    
+}

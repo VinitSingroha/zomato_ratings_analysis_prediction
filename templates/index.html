@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <title>Ratings Prediction</title>
+</head>
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Predict Zomato Restaurant Ratings</h1>
+            </section>
+
+        </div>
+        <div class="right">
+            
+            <form action="{{ url_for('predict')}}" method="post">
+                <section class="copy">
+                    <div class="login-container"></div>
+                    <p class="predicted">{{ prediction_text }}</p>
+                    <h2>Enter in the fields based on the type of data it needs :</h2><br><br>
+                    <p></p>
+                </section>
+                <div class="input-container">
+                    <input type="text" name="Online Order" placeholder="Order Online" required="required" /><br><br>
+
+                    <input type="text" name="Book Table" placeholder="Book Table" required="required" /><br><br>
+                    <input type="text" name="Votes" placeholder="Votes" required="required" /><br><br>
+                    <input type="text" name="Location" placeholder="Location" required="required" /><br><br>
+                    <input type="text" name="Restaurant Type" placeholder="Restaurant Type" required="required" /><br><br>
+                    <input type="text" name="Cuisines" placeholder="Cuisines" required="required" /><br><br>
+                    <input type="text" name="Cost" placeholder="Cost" required="required" /><br><br>
+                    <input type="text" name="Menu Item" placeholder="Menu Item" required="required" /><br><br>
+            
+                    <button type="submit" class="submit">Predict</button><br><br>
+
+                </div>
+
+
+
+            </form>
+            
+
+        </div>
+
+        
+    </div>
+</body>
+</html>
